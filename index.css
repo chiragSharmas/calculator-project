@@ -1,0 +1,48 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-container{
+    border: 1px solid black;
+    width: 400px;
+    height: auto;
+}
+
+.input-box{
+
+
+    margin: 5px;
+    padding: 10px;
+    width: 64%;
+    border: 2px solid black;
+}
+.btn{
+    background: green;
+    color: white;
+    padding: 10px;
+    width: 22%;
+    border: none;
+    border-radius: 3px;
+}
+.btn-two{
+    background: green;
+    color: white;
+    padding: 10px;
+    width: 22%;
+    border: none;
+    margin-left: 6px;
+    border-radius: 3px;
+}
+.row-three{
+    margin-top: 10px;
+}
+.row-four{
+    margin-top: 10px;
+}
+.row-five{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
