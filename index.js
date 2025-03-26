@@ -2,9 +2,13 @@
 
 
 const inputBox = document.querySelector(".input-box");
-inputBox.addEventListener("input", () => {
- 
-    console.log(inputBox.value);
+inputBox.addEventListener("input", (e) => {
+    var reg = /^[\d+\-*/%^]+$/;
+    if(!reg.test((e.target.value))){
+        console.log("chirag")
+        e.target.value= e.target.value.slice(0, -1)
+        }
+
 });
 
 
@@ -18,8 +22,28 @@ clearButton.addEventListener("click", () => {
     
 });
 
+document.addEventListener("keydown", function(event) {
+    console.log(`Key pressed: ${event.key}`);
+    var reg = /^[\d+\-*/%^]+$/;
+    if(!reg.test((event.key))){
+        console.log("chirag")
+        return;
+        }
+        else{
+            
+            inputBox.value = inputBox.value+event.key 
+        }
+  
+});
+
+
 
 const buttonData = document.querySelectorAll("button")
+
+// inputBox.addEventListener("input",(key)=>{
+
+
+// })
 
 buttonData.forEach((data)=>{
     data.addEventListener('click',()=>{
@@ -44,6 +68,9 @@ buttonData.forEach((data)=>{
     
        
     })
+
+
+
 })
 
 
